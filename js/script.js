@@ -42,10 +42,27 @@ createApp({
 
     methods: {
         next(){
-            this.count++
+            if (this.count < this.slides.length - 1){
+
+                this.count++;
+
+            }
+
+            else {
+                this.count = 0;
+            }
+
         },
         prev(){
-            this.count--
+            if (this.count > 0){
+
+                this.count--;
+
+            }
+
+            else {
+                this.count = this.slides.length - 1;
+            }
         }
     }
 
