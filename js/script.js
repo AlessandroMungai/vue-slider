@@ -41,6 +41,7 @@ createApp({
     },
 
     methods: {
+
         next(){
             if (this.count < this.slides.length - 1){
 
@@ -53,6 +54,7 @@ createApp({
             }
 
         },
+
         prev(){
             if (this.count > 0){
 
@@ -63,7 +65,12 @@ createApp({
             else {
                 this.count = this.slides.length - 1;
             }
+        },
+
+        changeImage(i){
+            this.count = i;
         }
+
     }
 
 }).mount('#app');
